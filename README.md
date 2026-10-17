@@ -47,7 +47,7 @@ Run `python3 scripts/new_course.py <course>` to copy `content/example` to `conte
 | `50_plan_sheet.js` | `PLAN`, `STRATEGY`, `SHEET` |
 | `checks.py` | `checks()` recomputes the worked solutions, `recompute(kind, chk)` recomputes a generated answer |
 
-[CONTENT.md](CONTENT.md) documents every field. The example course is short on purpose: two topics, six problems, two generators, twelve drills, one page of cheat sheet. It is there to show the shape, and to keep the harness honest.
+[CONTENT.md](CONTENT.md) documents every field. The example course is short on purpose: three topics, nine problems, four generators, eighteen drills, one page of cheat sheet. It is there to show the shape, and to keep the harness honest.
 
 ## What the harness checks
 

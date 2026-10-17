@@ -18,9 +18,9 @@ const CONFIG = {
   drillLede: 'Fast recall: definitions, which formula, what comes next. Use it between problems and on the morning of.',
 
   /* topic key, long name, short name (for chips). Problems and drills carry a topic key. */
-  topics: [['A', 'Centre and spread', 'Centre and spread'], ['B', 'Fitting a line', 'Lines']],
+  topics: [['A', 'Centre and spread', 'Centre and spread'], ['B', 'Fitting a line', 'Lines'], ['C', 'Independent events', 'Probability']],
   /* lesson order and names. Each key needs a W({id}) walkthrough and an L({id}) notes card set. */
-  lessons: [['A', 'Centre and spread'], ['B', 'Fitting a line']],
+  lessons: [['A', 'Centre and spread'], ['B', 'Fitting a line'], ['C', 'Independent events']],
 
   sheet: {
     title: 'Stats 101 midterm',
