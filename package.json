@@ -1,0 +1,14 @@
+{
+  "name": "exam-prep-app",
+  "version": "1.0.0",
+  "description": "Build a self-contained study web app for one exam from a content folder: plan, lessons, past problems step by step, drills, cheat sheet. With a verification harness.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "python3 scripts/build.py content/example",
+    "test": "python3 scripts/verify.py content/example && python3 scripts/gencheck.py content/example && python3 scripts/smoke.py content/example && python3 scripts/full.py content/example && python3 scripts/makepdf.py content/example"
+  },
+  "dependencies": {
+    "katex": "0.16.9"
+  }
+}
