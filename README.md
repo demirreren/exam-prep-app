@@ -31,7 +31,7 @@ python3 scripts/makepdf.py content/example   # cheat sheet to PDF, largest font 
 python3 scripts/build.py content/example --pdf build/example-sheet.pdf   # embed the PDF so the Save button works
 ```
 
-`npm test` runs all of them. The same suite runs on every push in GitHub Actions.
+`npm test` runs all of them. The same suite runs on every push in GitHub Actions. `scripts/shots.py content/example` takes four clean screenshots for sharing (needs a network connection for the web fonts).
 
 ## Make your own course
 
