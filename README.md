@@ -35,7 +35,7 @@ python3 scripts/build.py content/example --pdf build/example-sheet.pdf   # embed
 
 ## Make your own course
 
-Copy `content/example` to `content/<course>` and edit. The files load in name order, so keep the prefixes:
+Run `python3 scripts/new_course.py <course>` to copy `content/example` to `content/<course>` with a fresh `storageKey` and title, then edit. The files load in name order, so keep the prefixes:
 
 | file | what goes in it |
 |---|---|
