@@ -1,5 +1,7 @@
 # exam-prep-app
 
+[![tests](https://github.com/demirreren/exam-prep-app/actions/workflows/test.yml/badge.svg)](https://github.com/demirreren/exam-prep-app/actions/workflows/test.yml)
+
 Turn a folder of course material into one study web app for one exam. Five tabs: a study plan, step-by-step lessons, every past exam question with the steps hidden until you ask, a drill with endless generated questions, and a cheat sheet that fits exactly the size the exam allows.
 
 One HTML file. Works offline. Progress saved in the browser. Built from a content folder, so one engine serves any course.
@@ -11,9 +13,11 @@ I built the first version of this in about eight hours before a stats midterm, w
 ## Try it
 
 ```
-npm install                                  # KaTeX, inlined into the page at build time
-pip install -r requirements.txt && playwright install chromium
-python3 scripts/build.py content/example     # writes build/example.html and build/example-preview.html
+npm install                                        # KaTeX, inlined into the page at build time
+pip3 install -r requirements.txt                   # Playwright
+python3 -m playwright install chromium             # the browser the harness drives
+brew install poppler                               # pdfinfo and pdftoppm for the PDF check (apt: poppler-utils)
+python3 scripts/build.py content/example           # writes build/example.html and build/example-preview.html
 ```
 
 Open `build/example-preview.html` in a browser. Then run the harness:
@@ -27,7 +31,7 @@ python3 scripts/makepdf.py content/example   # cheat sheet to PDF, largest font 
 python3 scripts/build.py content/example --pdf build/example-sheet.pdf   # embed the PDF so the Save button works
 ```
 
-`npm test` runs all of them. `pdfinfo` and `pdftoppm` (poppler) are needed for the PDF check.
+`npm test` runs all of them. The same suite runs on every push in GitHub Actions.
 
 ## Make your own course
 
