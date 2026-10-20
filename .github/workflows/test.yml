@@ -45,3 +45,28 @@ jobs:
             build/example-sheet.pdf
             build/example.html
           if-no-files-found: ignore
+
+      - name: build the demo page with the pdf embedded
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          python3 scripts/build.py content/example --pdf build/example-sheet.pdf
+          mkdir -p pages && cp build/example-preview.html pages/index.html
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        with:
+          path: pages
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

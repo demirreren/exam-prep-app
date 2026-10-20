@@ -2,6 +2,8 @@
 
 [![tests](https://github.com/demirreren/exam-prep-app/actions/workflows/test.yml/badge.svg)](https://github.com/demirreren/exam-prep-app/actions/workflows/test.yml)
 
+Try the example course live: [demirreren.github.io/exam-prep-app](https://demirreren.github.io/exam-prep-app/)
+
 Turn a folder of course material into one study web app for one exam. Five tabs: a study plan, step-by-step lessons, every past exam question with the steps hidden until you ask, a drill with endless generated questions, and a cheat sheet that fits exactly the size the exam allows.
 
 One HTML file. Works offline. Progress saved in the browser. Built from a content folder, so one engine serves any course.
